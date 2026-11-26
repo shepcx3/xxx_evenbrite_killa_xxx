@@ -6,27 +6,13 @@ proxy_url: null  # e.g. "123.45.67.89:8080", or null
 
 global:
   event_url: "https://www.eventbrite.ca/e/dollar-beers-saturday-november-28-guaranteed-entry-before-10pm-tickets-2005481624525?aff=ebdsoporgprofile"
-  tickets_per_account: 4
+  max_tickets: 4        # hard cap for this account
+  trigger_time: "17:55" # 5:55 PM server-local time (set timezone in the scheduler/code)
 
-accounts:
-  - id: "acc_01"
-    email: "user1@example.com"
-    password: "secure_pass_1"
-    attendee_info:
-      name: "John Doe"
-      email: "john@trinity.com"
-  - id: "acc_02"
-    email: "user2@example.com"
-    password: "secure_pass_2"
-    attendee_info:
-      name: "Jane Smith"
-      email: "jane@trinity.com"
-  - id: "acc_03"
-    email: "user3@example.com"
-    password: "secure_pass_3"
-    attendee_info:
-      name: "Alex Doe"
-      email: "alex@trinity.com"
+attendee:
+  name: "Your Name"
+  email: "your_email@example.com"   # use a separate email if you want, not the login
+
 Fixed bot.py:
 ```
 
