@@ -2,36 +2,32 @@
 # accounts.yaml
 
 # Global Settings
-proxy_pool: "residential_pool_1" # Name of the proxy service in your setup
-proxy_type: "residential"
+proxy_url: null  # e.g. "123.45.67.89:8080", or null
+
+global:
+  event_url: "https://www.eventbrite.ca/e/dollar-beers-saturday-november-28-guaranteed-entry-before-10pm-tickets-2005481624525?aff=ebdsoporgprofile"
+  tickets_per_account: 4
 
 accounts:
   - id: "acc_01"
     email: "user1@example.com"
     password: "secure_pass_1"
-    event_url: "https://www.eventbrite.ca/e/..." # The specific event URL
-    payment_method: "visa_virtual_1" # Virtual card token
     attendee_info:
       name: "John Doe"
       email: "john@trinity.com"
-
   - id: "acc_02"
     email: "user2@example.com"
     password: "secure_pass_2"
-    event_url: "https://www.eventbrite.ca/e/..."
-    payment_method: "visa_virtual_2"
     attendee_info:
       name: "Jane Smith"
       email: "jane@trinity.com"
-
   - id: "acc_03"
     email: "user3@example.com"
     password: "secure_pass_3"
-    event_url: "https://www.eventbrite.ca/e/..."
-    payment_method: "visa_virtual_3"
     attendee_info:
       name: "Alex Doe"
       email: "alex@trinity.com"
+Fixed bot.py:
 ```
 
 #### **File 3: `README.md`**
